@@ -1,0 +1,13 @@
+<h1>Address Book</h1>
+<% @contacts.each do |c|%>
+	<div class="container">
+		<p>
+		  <strong>Name:</strong>
+		  <%= c.name %>		
+		  <strong>Phone:</strong>
+		  <%= c.phone %>
+		  <%= link_to "Show Contact Details", contact_path(c) %>
+		  <%= link_to "Edit Contact Details", edit_contact_path(c) %>
+		</p>
+	</div>
+<% end %>
