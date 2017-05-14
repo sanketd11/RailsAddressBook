@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   def index
-  	@contacts=Contact.all
+  	@contacts=Contact.order(:firstname).all
   end
 
   def show
@@ -17,6 +17,8 @@ class ContactsController < ApplicationController
 
   def create
   	@contact=Contact.new(contact_params)
+  	@contact.firstname.capitalize!
+  	@contact.lastname.capitalize!
   	if @contact.save
     	redirect_to @contact
   	else
@@ -25,11 +27,11 @@ class ContactsController < ApplicationController
   end
 
   def update
-	@contact = Contact.find(params[:id])	
+	@contact = Contact.find(params[:id])
 	if @contact.update_attributes(contact_params)
-	  redirect_to @contact
+	  	redirect_to @contact
 	else
-	  render 'edit'
+	  	render 'edit'
 	end
   end
 
@@ -41,7 +43,7 @@ class ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:contact).permit(:name, :address, :email, :phone)
+    params.require(:contact).permit(:firstname, :lastname,:address, :city,:state, :country,:zip ,:email, :phone)
   end
 
 end

@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-	validates :name,:address, :email, presence: true	
+	validates :firstname,:lastname, :address, :email, presence: true	
 	validates :phone, presence: true, numericality: true , length: {is: 10}
 	validate :valid_email
 

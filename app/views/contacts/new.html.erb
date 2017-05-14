@@ -1,4 +1,5 @@
-<h1>New Contact</h1>
+<div class="container">
+  <h1>Add New Contact</h1>
 <%= form_for :contact, url: contacts_path do |f| %>  
    <% if @contact.errors.any? %>
     <div id="error_explanation">
@@ -13,25 +14,92 @@
       </ul>
     </div>
   <% end %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :address %>
-    <%= f.text_area :address %>
-  </p>
-  <p>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="container-fluid" >
+    <table class="table_edit", align="center">
+      <tbody>
+        <tr>
+        <td>
+          <%= f.label :firstname %>
+        </td>
+        <td>
+          <%= f.text_field :firstname , type: "text", class: "form-control",  placeholder: "FirstName"%>
+        </td>
+        <td>
+          <%= f.label :lastname %>
+        </td>
+        <td>
+          <%= f.text_field :lastname , type: "text", class: "form-control",  placeholder: "LastName"%>
+        </td>
+      </tr>
+     
+      <tr>
+        <td>
+          <%= f.label :address %>
+        </td>
+        <td colspan="3">
+          <%= f.text_area :address , type: "text", class: "form-control",  placeholder: "Address" %>
+        </td>        
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :phone %>
+        </td>
+        <td>
+          <%= f.text_field :phone , type: "text", class: "form-control", placeholder: "1234567890"%>
+        </td>
+      </tr>
+      <tr>
+       <td >
+          <%= f.label :email %>
+       </td>
+       <td colspan="3">
+          <%= f.text_field :email , type: "email", class: "form-control", placeholder: "Email"%>
+       </td>
+
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :city %>
+        </td>
+        <td>
+          <%= f.text_area :city , type: "text", class: "form-control",  placeholder: "City Name" %>
+        </td>
+      
+        <td>
+          <%= f.label :state %>
+        </td>
+        <td>
+          <%= f.text_area :state , type: "text", class: "form-control",  placeholder: "State Name" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :country %>
+        </td>
+        <td>
+          <%= f.text_area :country , type: "text", class: "form-control",  placeholder: "Country Name" %>
+        </td>
+      
+        <td>
+          <%= f.label :zip %>
+        </td>
+        <td>
+          <%= f.text_area :zip , type: "text", class: "form-control",  placeholder: "Zip Code" %>
+        </td>
+      </tr> 
+      
+     
+      </tbody>
+      
+    </table>
+      
+      <div class="container", align="center">
+        <div style="margin-left: auto; margin-right: auto;padding: 10px">
+        <%= f.submit "Add", class: "btn btn-primary" ,style: "font-size: 20px"%>
+        <%= link_to 'Back', contacts_path, class: "btn btn-primary" ,style: "font-size: 20px"%>
+      </div>
+      </div>
+    </div>
+  </div>
 <% end %>
+</div>

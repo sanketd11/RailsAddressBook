@@ -1,14 +1,57 @@
-<h1>Address Book</h1>
-<% @contacts.each do |c|%>
-	<div class="container">
-		<p>
-		  <strong>Name:</strong>
-		  <%= c.name %>		
-		  <strong>Phone:</strong>
-		  <%= c.phone %>
-		  <%= link_to "Show", contact_path(c) %>
-		  <%= link_to "Edit", edit_contact_path(c) %>
-		  <%= link_to "Delete", contact_path(c), method: :delete, data: { confirm: 'Are you sure?' } %>
-		</p>
-	</div>
-<% end %>
+
+
+<div id="nav">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">	      
+	      <a class="navbar-brand" href="#">AddressBook</a>
+	    </div>
+	    <div >
+	      <ul class="nav navbar-nav">
+	        <li ><%= link_to "Add Contact", new_contact_path ,class: "nav navbar-nav", style: "font-size: 30px;"%></li>
+	      </ul>
+	    </div>
+	  </div>
+</nav>
+</div>
+<div class="container-table">
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>Name</th>
+	      <th>Email</th>
+	      <th>Phone </th>
+	      <th>Actions</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	<% idCount=0%> 
+	<% @contacts.each do |c| %>
+	<% idCount+=1%>
+		<tr>
+			<th>
+				<%= idCount %>	
+			</th>	
+			<td>
+				<%= c.firstname+" "+c.lastname %>	
+			</td>
+			
+			<td>
+				<%= c.email %>	
+			</td>
+			<td>
+				<%= c.phone %>	
+			</td>
+			  
+			<td>
+			  <%= link_to "Details", contact_path(c) %>
+			  <%= link_to "Edit", edit_contact_path(c) %>
+			  <%= link_to "Delete", contact_path(c), method: :delete, data: { confirm: 'Are you sure?' }, style: "color: red;" %>
+			</td>
+		</tr>
+	<% end %>
+	  </tbody>
+	</table>
+</div>
+	

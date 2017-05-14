@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+#nav{
+	margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+.container {
+	margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+
+.container-table {
+	margin-right: 30px;
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+.container-fluid{
+	border:1px solid #000000;
+	margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+    padding: 10px;
+}
+table.table_edit{
+    border-collapse:separate;
+    border-spacing:10px 10px;
+    width: 100%;
+}

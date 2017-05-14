@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
 
   get 'welcome/index'
-  root 'welcome#index'
+  root 'contacts#index'
 
   resources :contacts
 
