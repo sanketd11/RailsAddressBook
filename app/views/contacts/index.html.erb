@@ -6,8 +6,9 @@
 		  <%= c.name %>		
 		  <strong>Phone:</strong>
 		  <%= c.phone %>
-		  <%= link_to "Show Contact Details", contact_path(c) %>
-		  <%= link_to "Edit Contact Details", edit_contact_path(c) %>
+		  <%= link_to "Show", contact_path(c) %>
+		  <%= link_to "Edit", edit_contact_path(c) %>
+		  <%= link_to "Delete", contact_path(c), method: :delete, data: { confirm: 'Are you sure?' } %>
 		</p>
 	</div>
 <% end %>
