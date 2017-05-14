@@ -15,42 +15,83 @@
       </div>
     <% end %>
     <div class="container-fluid" >
-      <div>
-        <%= f.label :firstname %>
-        <%= f.text_field :firstname , type: "text", class: "form-control",  placeholder: "FirstName"%>
-        <%= f.label :lastname %>
-        <%= f.text_field :lastname , type: "text", class: "form-control",  placeholder: "LastName"%>
-      </div>
+      <table class="table_edit", align="center">
+      <tbody>
+        <tr>
+        <td>
+          <%= f.label :firstname %>
+        </td>
+        <td>
+          <%= f.text_field :firstname , type: "text", class: "form-control",  placeholder: "FirstName"%>
+        </td>
+        <td>
+          <%= f.label :lastname %>
+        </td>
+        <td>
+          <%= f.text_field :lastname , type: "text", class: "form-control",  placeholder: "LastName"%>
+        </td>
+      </tr>
      
-      <div>
-        <%= f.label :address %>
-        <%= f.text_area :address , type: "text", class: "form-control",  placeholder: "Address" %>
-      </div>
-      <div>
-        <%= f.label :city %>
-        <%= f.text_area :city , type: "text", class: "form-control",  placeholder: "City Name" %>
-      </div>
-      <div>
-        <%= f.label :state %>
-        <%= f.text_area :state , type: "text", class: "form-control",  placeholder: "State Name" %>
-      </div>
-      <div>
-        <%= f.label :country %>
-        <%= f.text_area :country , type: "text", class: "form-control",  placeholder: "Country Name" %>
-      </div>
-      <div>
-        <%= f.label :zip %>
-        <%= f.text_area :zip , type: "text", class: "form-control",  placeholder: "Zip Code" %>
-      </div>
+      <tr>
+        <td>
+          <%= f.label :address %>
+        </td>
+        <td colspan="3">
+          <%= f.text_area :address , type: "text", class: "form-control",  placeholder: "Address" %>
+        </td>        
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :phone %>
+        </td>
+        <td>
+          <%= f.text_field :phone , type: "text", class: "form-control", placeholder: "1234567890"%>
+        </td>
+      </tr>
+      <tr>
+       <td >
+          <%= f.label :email %>
+       </td>
+       <td colspan="3">
+          <%= f.text_field :email , type: "email", class: "form-control", placeholder: "Email"%>
+       </td>
 
-      <div>
-        <%= f.label :email %>
-        <%= f.text_field :email , type: "email", class: "form-control", placeholder: "Email"%>
-      </div>
-      <div>
-        <%= f.label :phone %>
-        <%= f.text_field :phone , type: "text", class: "form-control", placeholder: "1234567890"%>
-      </div>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :city %>
+        </td>
+        <td>
+          <%= f.text_area :city , type: "text", class: "form-control",  placeholder: "City Name" %>
+        </td>
+      
+        <td>
+          <%= f.label :state %>
+        </td>
+        <td>
+          <%= f.text_area :state , type: "text", class: "form-control",  placeholder: "State Name" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :country %>
+        </td>
+        <td>
+          <%= f.text_area :country , type: "text", class: "form-control",  placeholder: "Country Name" %>
+        </td>
+      
+        <td>
+          <%= f.label :zip %>
+        </td>
+        <td>
+          <%= f.text_area :zip , type: "text", class: "form-control",  placeholder: "Zip Code" %>
+        </td>
+      </tr> 
+      
+     
+      </tbody>
+      
+    </table>
      
       <div class="container", align="center">
         <div style="margin-left: auto; margin-right: auto;padding: 10px">

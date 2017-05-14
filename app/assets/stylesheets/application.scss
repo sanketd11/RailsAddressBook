@@ -15,12 +15,25 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	/*background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR0aKebkdo5r5P0OI2yWVNOQ_Ep_xD8XHhrYYGqknpCqeGOXx3c");*/
+	background-repeat: no-repeat;
+	background-color: #fff2e6
+	/*background-size: 100% 100%;*/
+	/*background-position: bottom;*/
+
+}
+.navbar navbar-default {
+	height: 30px;
+}
 #nav{
+	height: auto;
 	margin-right: 30px;
     margin-left: 30px;
     margin-top: 40px;
     margin-bottom: auto;
-    font-size: 20px;
+    font-size: 10px;
 }
 .container {
 	margin-right: auto;
@@ -36,6 +49,7 @@
     margin-top: auto;
     margin-bottom: auto;
     font-size: 20px;
+
 }
 .container-fluid{
 	border:1px solid #000000;
@@ -46,8 +60,12 @@
     font-size: 20px;
     padding: 10px;
 }
+table.table{
+	border-color: 1px solid #000000;
+}
 table.table_edit{
     border-collapse:separate;
     border-spacing:10px 10px;
     width: 100%;
+    
 }
