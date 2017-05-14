@@ -4,8 +4,7 @@
      <% if @contact.errors.any? %>
       <div id="error_explanation">
         <h2>
-          <%= pluralize(@contact.errors.count, "error") %> prohibited
-          this article from being saved:
+          Contact Not Created (<%= pluralize(@contact.errors.count, "error") %>)
         </h2>
         <ul>
           <% @contact.errors.full_messages.each do |msg| %>
