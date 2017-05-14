@@ -17,11 +17,12 @@
 @import "bootstrap";
 
 body {
-	/*background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR0aKebkdo5r5P0OI2yWVNOQ_Ep_xD8XHhrYYGqknpCqeGOXx3c");
+	/*background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR0aKebkdo5r5P0OI2yWVNOQ_Ep_xD8XHhrYYGqknpCqeGOXx3c");*/
 	background-repeat: no-repeat;
-	background-size: cover;*/
+	background-size: cover;
+	background-image: url("http://prodimage.images-bn.com/pimages/9781441316011_p1_v4_s550x406.jpg");
 	/*background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmH0yEjKiPa4kF2Hmg3uR_oI-ciCdwh_-g8BIJmA1fxPIFYq2X");*/
-	background-color: #fff2e6
+	
 	/*background-size: 100% 100%;*/
 	/*background-position: bottom;*/
 
@@ -44,13 +45,17 @@ body {
     margin-bottom: auto;
     font-size: 20px;
 }
+.Header{
+	background-color: #fff2e6;
+	opacity: 0.8;
+}
 
 .container-table {
 	margin-right: 30px;
     margin-left: 30px;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 .container-fluid{
@@ -62,8 +67,13 @@ body {
     font-size: 20px;
     padding: 10px;
 }
-table.table{
+.table{
 	border-color: 1px solid #000000;
+	opacity: 0.9;
+	background-color: #e0e0eb;
+
+
+	
 }
 table.table_edit{
     border-collapse:separate;
@@ -87,6 +97,7 @@ table.table_edit{
     margin-top: auto;
     margin-bottom: auto;
     padding: 5%;
+    font-weight: bold;
 }
 
 
@@ -98,16 +109,17 @@ table.table_edit{
     padding-top:100px;
     padding-left: 20%;
     padding-right: 10%;
-    font-size: 20px;
+    font-size: 15px;
     
 }
 #right{
 	float: right;
+	background-color: #e0e0eb;
+	opacity: 0.9;
 	
 }
 #left{
-	float:left;
-	
+	float:left;	
 	word-wrap: break-word;
 	font-size: 40px;
 	
