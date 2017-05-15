@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This is an online Contact/Address management application developed using Rails Framework.
+## This Application is hosted at Heroku [Address Book](https://boiling-lowlands-46275.herokuapp.com/users/sign_in)
 
-Things you may want to cover:
+# To Do List:
+- Add forget password mailing feature
+- Create separate address books for each user
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
